@@ -7,20 +7,20 @@ public class Materia {
         Scanner Teclado = new Scanner(System.in);
         Estudiante alumno = new Estudiante();
         System.out.print("Ingrese el Nombre del Estudiante: ");
-        alumno.setnombre(Teclado.nextLine());
+        alumno.setnombre(Teclado.next());
         System.out.print("Ingrese el Nombre de la Asignatura: ");
-        alumno.setasignatura(Teclado.nextLine());
+        alumno.setasignatura(Teclado.next());
         System.out.print("Ingrese el Codigo del Estudiante: ");
-        alumno.setcodigo(Teclado.nextInt());
+        alumno.setcod(Teclado.nextInt());
         System.out.print("Ingrese el Número de Notas: ");
-        alumno.setcanNotas(Teclado.nextInt());
-        double [] nota = new double [alumno.getcanNotas()];
-        int [] porcentaje = new int [alumno.getcanNotas()];
-        alumno.filNotas(Teclado.nextLine());
-        for (int i = 0; i < alumno.getcanNotas(); i++){
+        alumno.setnNotas(Teclado.nextInt());
+        double [] nota = new double [alumno.getnNotas()];
+        int [] porcentaje = new int [alumno.getnNotas()];
+        
+        for (int i = 0; i < alumno.getnNotas(); i++){
             System.out.print("Ingrese la Nota " + (i+1) + ": ");
-            /*nota[i]= Teclado.nextDouble();
-            alumno.setnotas(nota);*/
+            nota[i]= Teclado.nextDouble();
+            alumno.setnota(nota);
             System.out.print("Ingrese el porcentaje de la Nota " + (i+1) + ": ");
             porcentaje[i]=Teclado.nextInt();
             alumno.setporNotas(porcentaje);
